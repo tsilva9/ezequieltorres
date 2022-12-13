@@ -1,0 +1,13 @@
+.redes {
+  font-family: $font-primary;
+  color: $color-black;
+  width: min-content;
+
+  &__red {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -.1rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+  }
+}

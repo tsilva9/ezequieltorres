@@ -1,0 +1,63 @@
+.hero {
+  font-family: $font-primary;
+
+  display: grid;
+  grid-template-columns: repeat(4, 22.5vw);
+  margin: 0 10rem;
+
+  width: 90vw;
+  
+
+  &__nombre {
+    margin-top: 5rem;
+    color: $color-black;
+    font-size: 23rem;
+    font-weight: 400;
+    letter-spacing: -1rem;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    grid-row: 1 / 2;
+  }
+
+  &__titulo {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: -2rem;
+
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -.1rem;
+    grid-row: 2 / 3;
+
+  }
+
+  &__descripcion {
+    grid-column: 3 / -1;
+
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 8rem;
+    grid-row: 3 / 4;
+    
+   
+
+  }
+
+  &__redes-container {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-top: auto;
+    margin-left: 5rem;
+  }
+
+  &__foot {
+    grid-row: 4 / 5;
+    //margin-top: auto;
+    margin-left: 5rem;
+    grid-column: 1 / 2;
+    
+    
+  }
+
+}

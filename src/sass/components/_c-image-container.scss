@@ -1,0 +1,90 @@
+// First letter in image modifiers is for square, vertical or horizontal proportions, the second is for small, medium or large dimensions.
+.image-container {
+  height: max-content;
+  width: max-content;
+
+  &__image {
+    image-resolution: from-image;
+    object-fit: cover;
+
+    &--ss {
+
+    }
+
+    &--sm {
+
+    }
+
+    &--sl {
+
+    }
+
+    &--vs {
+
+
+    }
+
+    &--vm {
+      height: 60rem;
+      width: 40rem;
+      
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 45rem;
+        width: 30rem;
+      }
+
+    }
+
+    &--vl {
+      height: 80rem;
+      width: 50rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 45rem;
+        width: 30rem;
+      }
+      
+      @media only screen and (max-width: $bp-small) {
+        height: 60rem;
+        width: 35rem;
+      }
+
+    }
+
+    &--hs {
+
+    }
+
+    &--hm {
+      height: 40rem;
+      width: 60rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 45rem;
+        width: 72rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: 23rem;
+        width: 35rem;
+      }
+    }
+
+    &--hl {
+      height: 50rem;
+      width: 80rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 45rem;
+        width: 72rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: 23rem;
+        width: 35rem;
+      }
+    }
+  }
+
+}

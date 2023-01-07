@@ -1,3 +1,93 @@
 .galeria {
-  width: 400vw;
+  width: min-content;
+  
+  //background-color: orange;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-column-gap: 20rem;
+
+  min-height: 0;  /* NEW */
+  min-width: 0;   /* NEW; needed for Firefox */
+
+  @media only screen and (min-width: $bp-large) {
+    margin-left: 10vw;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-right: 10vw;
+  }
+
+  
+
+  @media only screen and (max-width: $bp-small) {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  &__container {
+    height: 100%;
+    width: max-content;
+    overflow: hidden;  /* NEW */
+    min-width: 0;      /* NEW; needed for Firefox */
+
+    @media only screen and (max-width: $bp-medium) {
+      height: min-content;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      height: min-content;
+      margin: 6rem 0;
+      width: min-content;
+
+    
+    }
+
+    &--vertical-1 {
+      grid-row: 7 / 20;
+      grid-column: 1 / 2;
+    }
+
+    &--vertical-2 {
+      grid-row: 2 / 20;
+      grid-column: 3 / 4;
+    }
+
+    &--vertical-3 {
+      grid-row: 7 / 20;
+      grid-column: 5 / 6;
+    }
+
+    &--horizontal-1 {
+      grid-column: 2 / 3;
+      grid-row: 3 / 19;
+    }
+
+    &--horizontal-2 {
+      grid-column: 4 / 5;
+      grid-row: 5 / 19;
+    }
+
+    &--horizontal-3 {
+      grid-column: 6 / 7;
+      grid-row: 2 / 18;
+    }
+
+    &--horizontal-4 {
+      grid-column: 7 / 8;
+      grid-row: 6 / 19;
+    }
+
+  }
 }

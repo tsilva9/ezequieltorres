@@ -14,11 +14,20 @@ $color-grey-dark-2: #6d5d4b;
 $color-white: #ffffff;
 $color-black: #000000;
 
-// Breakpoint Variables
+// Breakpoint Variables for Width
+$bpw-huge: 93.75em; //1500px
+$bpw-largest: 75em; //1200px
+$bpw-large: 62.5em; //1000px
+$bpw-medium: 50em; //800px
+$bpw-small: 37.5em; //600px
+
+// Breakpoint Variables for Height
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
 $bp-medium: 50em; //800px
 $bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //600px
+
 
 // FONT VARIABLES
 $font-primary: "Helvetica Light", sans-serif;
@@ -36,10 +45,19 @@ $font-display: "Helvetica", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
-  height: auto;
+  height: 100%;
+  background-color: $color-white;
 
-  @media only screen and (max-width: $bp-largest) {
+  // @media only screen and (max-width: $bp-largest) {
+  //   font-size: 50%;
+  // }
+
+  @media only screen and (max-height: $bp-medium) {
     font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    background-color: $color-black;
   }
 }
 
@@ -47,11 +65,19 @@ body {
   font-family: $font-primary;
   background-color: $color-white;
   color: $color-black;
+  //overflow: visible;
   //font-weight: 300;
   //line-height: 1.6;
   //overflow-x: hidden;
   //transition: background-color .8s ease-out;
   height: auto;
+  animation: page--load-1 ease-in-out 2000ms;
+
+  @media only screen and (max-width: $bp-small) {
+    background-color: $color-black;
+    color: $color-white;
+    animation: page--load-2 ease-in-out 2000ms;
+  }
 }
 
 // .container {
@@ -80,4 +106,29 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
+  cursor: none;
+}
+
+@keyframes page--load-1 {
+  0% {
+    background-color: black;
+    color: white;
+  }
+
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
+
+@keyframes page--load-2 {
+  0% {
+    background-color: white;
+    color: black;
+  }
+
+  100% {
+    background-color: black;
+    color: white;
+  }
 }

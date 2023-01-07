@@ -1,17 +1,19 @@
 // BASE
-@import "base/base";
+@import "base/b-base";
 
 //LAYOUT
 //@import "layout/l-navbar";
 @import "layout/l-hero";
 @import "layout/l-galeria";
-//@import "layout/l-loader";
+@import "layout/l-app";
+@import "layout/l-visuales";
 
 //COMPONENTS
 @import "components/c-redes";
-//@import "components/c-foto-texto";
-//@import "components/c-viewport-img";
-//@import "components/c-burger";
+@import "components/c-image-container";
 
-//DEV
-//@import "components/dev-placeholder";
+@import "components/c-navbar";
+@import "components/c-menu";
+
+//UTILS
+@import "utils/u-custom-cursor";

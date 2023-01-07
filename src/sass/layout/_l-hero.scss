@@ -1,16 +1,40 @@
 .hero {
   font-family: $font-primary;
 
-  display: grid;
-  grid-template-columns: repeat(4, 22.5vw);
-  margin: 0 10rem;
+  display: grid ; 
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 7rem;
+  z-index: 10;
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    width: 100vw;
+}
+
+@media only screen and (max-width: $bp-medium) {
+  grid-template-rows: repeat(4, min-content);
+  height: min-content;
+}
 
   width: 90vw;
-  
+  height: 100%;
 
+  // @media only screen and (max-height: $bp-medium) {
+  //   //grid-template-rows: 6rem calc(100vh - 6rem);
+  // }
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex; 
+    flex-direction: column;
+    margin: 0 0rem;
+    height: min-content;
+    width: 100vw;
+    }
+  
+  
+  //animation: hero--load-1 ease-in 2000ms;
   &__nombre {
     margin-top: 5rem;
-    color: $color-black;
+    //color: $color-black;
     font-size: 23rem;
     font-weight: 400;
     letter-spacing: -1rem;
@@ -18,46 +42,155 @@
     justify-self: center;
 
     grid-row: 1 / 2;
+    animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
+
+    @media only screen and (max-width: $bpw-huge) {
+      font-size: 19rem;
+  }
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 17rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 15rem;
+}
+@media only screen and (max-width: $bp-medium) {
+  font-size: 13rem;
+}
+
+@media only screen and (max-width: $bp-small) {
+  font-size: 5rem;
+  font-weight: 400;
+    letter-spacing: 0rem;
+    margin-top: 4rem;
+    align-self: center;
+  }
+    
   }
 
   &__titulo {
     grid-column: 1 / -1;
     justify-self: center;
-    margin-top: -2rem;
+    margin-top: -5rem;
 
     font-size: 3rem;
     font-weight: 400;
     letter-spacing: -.1rem;
     grid-row: 2 / 3;
+    animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
+
+    @media only screen and (max-width: $bpw-huge) {
+      font-size: 2.6rem;
+  }
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2rem;
+      margin-top: -7rem;
+  }
+
+    @media only screen and (max-width: $bp-large) {
+    font-size: 2rem;
+    margin-top: -3rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: -1rem;
+  }
+
+    @media only screen and (max-width: $bp-small) {
+    font-size: 2rem;
+    letter-spacing: -.1rem;
+    margin-top: .5rem;
+    align-self: center;
+  }
+
 
   }
 
   &__descripcion {
     grid-column: 3 / -1;
-
     font-size: 4rem;
     font-weight: 400;
-    margin-top: 8rem;
-    grid-row: 3 / 4;
-    
-   
+    margin-top: 3rem;
+    grid-row: 3 / 5;
+    white-space: normal;
 
+    @media only screen and (max-width: $bpw-huge) {
+      font-size: 3.3rem;
+  }
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2.8rem;
+      margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 2.6rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
+  @media only screen and (max-width: $bp-medium) {
+  font-size: 2.4rem;
+  margin-top: 6rem;
+  margin-right: 3rem;
+}
+
+  @media only screen and (max-width: $bp-small) {
+  font-size: 2.6rem;
+  margin: 2rem 2.5rem;
+  align-self: center;
+  text-align: center;
+}
+  
   }
 
   &__redes-container {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    margin-top: auto;
+    grid-row: 3 / 5;
+    margin: auto;
     margin-left: 5rem;
+    
+    @media only screen and (max-width: $bp-largest) {
+      margin-left: 7rem;
+      align-self: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 6rem;
+      align-self: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 0rem 2rem;
+      align-self: center;
+    }
   }
 
   &__foot {
     grid-row: 4 / 5;
-    //margin-top: auto;
     margin-left: 5rem;
     grid-column: 1 / 2;
     
-    
+
+    @media only screen and (max-height: $bp-medium) {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      align-self: center;
+      margin-left: 0rem;
+    }
+  }
+}
+
+@keyframes title--load-1 {
+  0% {
+    transform: translateY(1rem);
   }
 
+  100% {
+    transform: translateY(0rem);
+  }
 }

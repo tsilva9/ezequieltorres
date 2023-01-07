@@ -1,0 +1,10 @@
+.app {
+  display: flex;
+  width: min-content;
+  flex-direction: row;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    }
+
+}

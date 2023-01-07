@@ -1,0 +1,18 @@
+.custom-cursor {
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate(-100%, -100%);
+  position: fixed;
+  z-index: 1000;
+  display: block;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid white;
+  //background-color: white;
+  mix-blend-mode: difference;
+  opacity: 1;
+
+ // transition-timing-function: ease;
+  //transition-duration: 100ms;
+}

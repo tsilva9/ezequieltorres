@@ -11,7 +11,15 @@
   min-height: 0;  /* NEW */
   min-width: 0;   /* NEW; needed for Firefox */
 
-  
+  @media only screen and (max-width: $bp-small) {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
 
   &__container {
     height: 100%;
@@ -19,12 +27,21 @@
     overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    } 
+
     
     &--cuadrado-1 {
       grid-row: 13 / 20;
       grid-column: 1 / 3;
       z-index: 4;
     }
+
 
     &--horizontal-1 {
       grid-row: 3 / 20;
@@ -48,12 +65,24 @@
       grid-column: 6 / 9;
       z-index: 1;
       width: 65vw;
+      @media only screen and (max-width: $bp-small) {
+        height: 90vh;
+        width: 100%;
+
+        
+      }
     }
 
     &--vertical-1 {
       grid-row: 3 / 20;
       grid-column: 7 / 8;
       z-index: 6;
+      
+      @media only screen and (max-width: $bp-small) {
+        margin-top: -90vh;
+        scale: 0.7;
+        
+      }
     }
 
     &--cuadrado-3 {
@@ -62,6 +91,15 @@
       z-index: 1;
       margin-left: -4rem;
       width: 65vw;
+
+      @media only screen and (max-width: $bp-small) {
+        height: 65vh;
+        width: 100%;
+        margin-left: 0rem;
+
+        display: flex;
+        justify-content: center;
+      }
     }
 
     &--horizontal-3 {
@@ -73,6 +111,14 @@
     &--cuadrado-4 {
       grid-row: 4 / 19;
       grid-column: 13 / 14;
+
+      @media only screen and (max-width: $bp-small) {
+        
+        margin-top: -13rem;
+        margin-left: 13rem;
+        z-index: 5;
+        
+      }
  
     }
 

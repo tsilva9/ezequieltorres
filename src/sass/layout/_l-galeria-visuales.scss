@@ -11,6 +11,16 @@
   min-height: 0;  /* NEW */
   min-width: 0;   /* NEW; needed for Firefox */
 
+  @media only screen and (max-width: $bp-small) {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
   &__nombre {
     margin-top: 0rem;
   
@@ -29,14 +39,18 @@
 
 
   &__container {
-    height: 100%;
+    height: min-content;
     width: max-content;
     overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 
-    
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 5rem;
 
-    
+      &:last-child {
+        margin-bottom: 0;
+      }
+    } 
 
     &--triptico-1 {
       grid-row: 9 / 20;
@@ -77,16 +91,26 @@
       z-index: 3;
     }
 
+
     &--cuadrado-1 {
       grid-row: 2 / 20;
       grid-column: 13 / 14;
       z-index: 4;
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 8rem;
+        
+      }
     }
 
     &--cuadrado-2 {
       grid-row: 10 / 20;
       grid-column: 13 / 14;
       z-index: 4;
+      @media only screen and (max-width: $bp-small) {
+        margin-left: 8rem;
+        margin-top: -8rem;
+        
+      }
     }
 
     &--vertical-4 {
@@ -94,6 +118,12 @@
       grid-column: 14 / 15;
       z-index: 1;
       margin-right: 5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 0rem;
+        height: 60vh;
+        width: 100%;
+      }
     }
 
 

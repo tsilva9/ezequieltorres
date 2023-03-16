@@ -26,6 +26,11 @@
         width: 25rem;
       }
 
+      @media only screen and (max-width: $bp-small) {
+        height: 20rem;
+        width: 20rem;
+      }
+
     }
 
     &--sl {
@@ -117,6 +122,8 @@
 
       height: 100vh;
       //width: 40vw;
+
+     
 
     }
   }

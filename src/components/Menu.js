@@ -2,7 +2,7 @@ import "../css/style.css";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
-
+import { mouseEnter, mouseLeave } from "../utils/mouseLeaveEnter";
 import { Outlet, Link } from "react-router-dom";
 
 const Menu = () => {
@@ -14,13 +14,6 @@ const Menu = () => {
     /* key: Optional String to prefix the CSS variables */
     key: null,
   });
-  const mouseEnter = () => {
-    document.getElementById("cursor").classList.add("custom-cursor--active");
-  };
-
-  const mouseLeave = () => {
-    document.getElementById("cursor").classList.remove("custom-cursor--active");
-  };
 
   return (
     <ul className="menu">

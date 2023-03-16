@@ -1,24 +1,22 @@
 import "../../css/style.css";
 import ImageContainer from "../ImageContainer";
 import Triptico from "../Triptico";
+import { mouseEnter, mouseLeave } from "../../utils/mouseLeaveEnter";
 
 const GaleriaVisuales = (props) => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
   };
-  const mouseEnter = () => {
-    document.getElementById("cursor").classList.add("custom-cursor--active");
-  };
-
-  const mouseLeave = () => {
-    document.getElementById("cursor").classList.remove("custom-cursor--active");
-  };
 
   return (
     <div data-scroll-section>
       <div className="galeria-visuales">
-        <h1 className="galeria-visuales__nombre">Visuales</h1>
+        {window.innerWidth <= 600 ? (
+          <div></div>
+        ) : (
+          <h1 className="galeria-visuales__nombre">Visuales</h1>
+        )}
 
         <div
           className="galeria-visuales__container  galeria-visuales__container--gif-1"
@@ -35,7 +33,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__gif image-container__image--hl"
           />
         </div>
-
         <div
           className="galeria-visuales__container galeria-visuales__container--triptico-1"
           data-scroll
@@ -53,7 +50,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__image--hl"
           />
         </div>
-
         <div
           className="galeria-visuales__container  galeria-visuales__container--gif-2"
           data-scroll
@@ -69,7 +65,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__gif image-container__image--hl"
           />
         </div>
-
         <div
           className="galeria-visuales__container galeria-visuales__container--texto"
           data-scroll
@@ -80,7 +75,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__image--hs"
           />
         </div>
-
         <div
           className="galeria-visuales__container galeria-visuales__container--triptico-2"
           data-scroll
@@ -88,7 +82,6 @@ const GaleriaVisuales = (props) => {
         >
           <Triptico imagenes={props.triptico.triptico2} />
         </div>
-
         <div
           className="galeria-visuales__container  galeria-visuales__container--horizontal-4"
           data-scroll
@@ -104,7 +97,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__gif image-container__image--hl"
           />
         </div>
-
         <div
           className="galeria-visuales__container galeria-visuales__container--cuadrado-1"
           data-scroll
@@ -115,7 +107,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__image--sm"
           />
         </div>
-
         <div
           className="galeria-visuales__container galeria-visuales__container--cuadrado-2"
           data-scroll
@@ -126,7 +117,6 @@ const GaleriaVisuales = (props) => {
             clase="image-container__image image-container__image--sm"
           />
         </div>
-
         <div
           className="galeria-visuales__container galeria-visuales__container--vertical-4"
           data-scroll

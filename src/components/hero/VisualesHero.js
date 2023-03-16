@@ -4,6 +4,11 @@ const Visuales = () => {
   return (
     <div data-scroll-section>
       <div className="visuales">
+        {window.innerWidth <= 600 ? (
+          <h1 className="visuales__nombre">Visuales</h1>
+        ) : (
+          <div></div>
+        )}
         {/* <h1 className="visuales__nombre">Visuales</h1> */}
 
         <p className="visuales__descripcion visuales__descripcion--1">

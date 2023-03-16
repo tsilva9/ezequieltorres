@@ -2,13 +2,29 @@
   display: flex;
   flex-direction: column;
 
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+    flex-direction: row; 
+  }
+
 
   &__img {
     width: 17rem;
     margin-top: 1.6rem;
 
-    
+    @media only screen and (max-width: $bp-small) {
+      width: 9rem;
+      margin-right: 3rem;
+      margin-top: 0; 
+
+      &:last-child {
+        margin-right: 0; 
+      }
+
+    }
   }
+
+  
 
 
 }

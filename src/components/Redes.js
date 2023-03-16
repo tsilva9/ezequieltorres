@@ -1,17 +1,10 @@
 import "../css/style.css";
+import { mouseEnter, mouseLeave } from "../utils/mouseLeaveEnter";
 
 const Redes = () => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
-  };
-
-  const mouseEnter = () => {
-    document.getElementById("cursor").classList.add("custom-cursor--active");
-  };
-
-  const mouseLeave = () => {
-    document.getElementById("cursor").classList.remove("custom-cursor--active");
   };
 
   return (

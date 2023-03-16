@@ -12,7 +12,11 @@ const CustomCursor = () => {
     });
   });
 
-  return <div className="custom-cursor" ref={cursorRef} />;
+  return window.innerWidth <= 600 ? (
+    <div ref={cursorRef}></div>
+  ) : (
+    <div className="custom-cursor" ref={cursorRef} id="cursor" />
+  );
 };
 
 export default CustomCursor;

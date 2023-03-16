@@ -13,6 +13,16 @@
   mix-blend-mode: difference;
   opacity: 1;
 
+  
+
  // transition-timing-function: ease;
   //transition-duration: 100ms;
+
+  &--active {
+    background-color: white;
+    transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms, width cubic-bezier(0.075, 0.82, 0.165, 1) 2000ms, height cubic-bezier(0.075, 0.82, 0.165, 1) 2000ms;
+    width: 6rem;
+    height: 6rem;
+
+  }
 }

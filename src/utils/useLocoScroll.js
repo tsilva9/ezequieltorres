@@ -19,9 +19,13 @@ export default function useLocoScroll(start) {
 
     // window.addEventListener("scroll");
 
-    scroll.on("scroll", (instance) => {
-      setScrollY(instance.scroll.y);
-    });
+    // scroll.on("scroll", (instance) => {
+    //   setScrollY(instance.scroll.y);
+    // });
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
   }, [start]);
 
   return scrollY;

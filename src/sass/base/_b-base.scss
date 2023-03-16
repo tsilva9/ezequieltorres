@@ -56,9 +56,9 @@ html {
     font-size: 50%;
   }
 
-  @media only screen and (max-width: $bp-small) {
-    background-color: $color-black;
-  }
+  // @media only screen and (max-width: $bp-small) {
+  //   background-color: $color-black;
+  // }
 }
 
 body {
@@ -73,12 +73,13 @@ body {
   height: auto;
   animation: page--load-1 ease-in-out 2000ms;
 
-  @media only screen and (max-width: $bp-small) {
-    background-color: $color-black;
-    color: $color-white;
-    animation: page--load-2 ease-in-out 2000ms;
-  }
+  // @media only screen and (max-width: $bp-small) {
+  //   background-color: $color-black;
+  //   color: $color-white;
+  //   animation: page--load-2 ease-in-out 2000ms;
+  // }
 }
+
 
 // .container {
 //   display: grid;

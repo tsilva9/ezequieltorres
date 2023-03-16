@@ -3,9 +3,13 @@
   height: max-content;
   width: max-content;
 
+  
+
   &__image {
     image-resolution: from-image;
     object-fit: cover;
+
+    
 
     &--ss {
 
@@ -13,11 +17,21 @@
 
     &--sm {
 
+      height: 35rem;
+      width: 35rem;
+      
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 25rem;
+        width: 25rem;
+      }
+
     }
 
     &--sl {
 
     }
+
 
     &--vs {
 
@@ -53,6 +67,18 @@
     }
 
     &--hs {
+      height: 30rem;
+      width: 45rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 30rem;
+        width: 45rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: 20rem;
+        width: 30rem;
+      }
 
     }
 
@@ -85,6 +111,25 @@
         width: 35rem;
       }
     }
+
+    // WHOLE HEIGHT
+    &--wholeh {
+
+      height: 100vh;
+      //width: 40vw;
+
+    }
   }
 
+  &__gif {
+    &:hover {
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+      transform: scale(1.2);
+    }
+
+  }
+
+  
+
 }
+

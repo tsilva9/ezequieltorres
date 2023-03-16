@@ -12,8 +12,9 @@
   min-width: 0;   /* NEW; needed for Firefox */
 
   @media only screen and (min-width: $bp-large) {
-    margin-left: 10vw;
+    margin-left: 5vw;
   }
+
 
   @media only screen and (max-width: $bp-medium) {
     margin-left: 10vw;
@@ -33,7 +34,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    margin: 0;
   }
 
   &__container {
@@ -46,12 +48,17 @@
       height: min-content;
     }
 
+    
     @media only screen and (max-width: $bp-small) {
       height: min-content;
       margin: 6rem 0;
-      width: min-content;
+      width: 100%;
+      overflow: hidden;
 
-    
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
     }
 
     &--vertical-1 {
@@ -72,6 +79,8 @@
     &--horizontal-1 {
       grid-column: 2 / 3;
       grid-row: 3 / 19;
+
+      
     }
 
     &--horizontal-2 {

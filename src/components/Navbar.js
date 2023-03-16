@@ -10,6 +10,14 @@ const Navbar = () => {
     setIsPressed(!isPressed);
   };
 
+  const mouseEnter = () => {
+    document.getElementById("cursor").classList.add("custom-cursor--active");
+  };
+
+  const mouseLeave = () => {
+    document.getElementById("cursor").classList.remove("custom-cursor--active");
+  };
+
   return (
     <div className={`navbar${clase}`}>
       <div className={`navbar__menu-container${clase}`}>
@@ -20,6 +28,8 @@ const Navbar = () => {
       <button
         onClick={handleButton}
         className={`navbar__button${clase}`}
+        onMouseEnter={mouseEnter}
+        onMouseLeave={mouseLeave}
       ></button>
     </div>
   );

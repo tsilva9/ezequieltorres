@@ -7,11 +7,15 @@
 @import "layout/l-galeria";
 @import "layout/l-app";
 @import "layout/l-visuales";
+@import "layout/l-galeria-visuales";
+@import "layout/l-galeria-otros";
+@import "layout/l-otros";
+
 
 //COMPONENTS
 @import "components/c-redes";
 @import "components/c-image-container";
-
+@import "components/c-triptico";
 @import "components/c-navbar";
 @import "components/c-menu";
 

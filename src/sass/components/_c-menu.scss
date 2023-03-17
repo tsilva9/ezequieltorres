@@ -2,6 +2,10 @@
   list-style-type:none;
   padding-bottom: 6rem;
 
+  @media only screen and (max-width: $bp-large) {
+    padding-bottom: 3rem;
+  }
+
   &__fila {
     font: $font-primary;
     font-size: 5rem;
@@ -11,6 +15,18 @@
     overflow: hidden;
     width: min-content;
     margin-top: 1rem;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem;
+    }
 
   .char:nth-of-type(2n),
     .char:nth-of-type(2n+1)

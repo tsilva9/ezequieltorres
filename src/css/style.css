@@ -831,6 +831,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   z-index: 3;
   position: fixed;
   right: 0px; }
+  @media only screen and (max-width: 50em) {
+    .navbar {
+      height: 7rem; } }
   .navbar--is-active {
     width: 100%;
     display: flex;
@@ -849,11 +852,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     border: none;
     margin-left: auto;
     margin-right: 5rem;
-    z-index: 5; }
+    z-index: 100; }
     @media only screen and (max-width: 37.5em) {
       .navbar__button {
-        background-color: #ffffff;
-        animation: page--load-1 ease-in-out 2000ms; } }
+        margin-right: 2rem; } }
     .navbar__button:hover {
       cursor: none; }
     .navbar__button--is-active {
@@ -871,12 +873,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     margin-left: 5rem;
     margin-top: 3rem;
     display: none; }
+    @media only screen and (max-width: 62.5em) {
+      .navbar__menu-container {
+        margin-right: 0;
+        margin-top: 0; } }
     .navbar__menu-container--is-active {
       display: inherit; }
 
 .menu {
   list-style-type: none;
   padding-bottom: 6rem; }
+  @media only screen and (max-width: 62.5em) {
+    .menu {
+      padding-bottom: 3rem; } }
   .menu__fila {
     font: "Helvetica Light", sans-serif;
     font-size: 5rem;
@@ -886,6 +895,15 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     overflow: hidden;
     width: min-content;
     margin-top: 1rem; }
+    @media only screen and (max-width: 62.5em) {
+      .menu__fila {
+        width: 100%; } }
+    @media only screen and (max-width: 50em) {
+      .menu__fila {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .menu__fila {
+        font-size: 3rem; } }
     .menu__fila .char:nth-of-type(2n),
     .menu__fila .char:nth-of-type(2n+1) {
       transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }

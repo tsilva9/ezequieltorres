@@ -11,7 +11,7 @@
   min-height: 0;  /* NEW */
   min-width: 0;   /* NEW; needed for Firefox */
 
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-large) {
     height: min-content;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,11 @@
     align-items: center;
     width: 100%;
     margin: 0;
+    margin-top: 10rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 1rem;
   }
 
   &__nombre {
@@ -35,6 +40,10 @@
     //justify-self: center;
     text-transform: uppercase;
     //align-self: flex-end;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 16rem;
+    }
   }
 
 
@@ -43,6 +52,15 @@
     width: max-content;
     overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
+
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 10rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    } 
+
 
     @media only screen and (max-width: $bp-small) {
       margin-bottom: 5rem;
@@ -96,6 +114,11 @@
       grid-row: 2 / 20;
       grid-column: 13 / 14;
       z-index: 4;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: 15rem;
+        
+      }
       @media only screen and (max-width: $bp-small) {
         margin-right: 8rem;
         
@@ -106,10 +129,15 @@
       grid-row: 10 / 20;
       grid-column: 13 / 14;
       z-index: 4;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-left: 15rem;
+        margin-top: -15rem;
+      }
+
       @media only screen and (max-width: $bp-small) {
         margin-left: 8rem;
         margin-top: -8rem;
-        
       }
     }
 
@@ -118,6 +146,17 @@
       grid-column: 14 / 15;
       z-index: 1;
       margin-right: 5rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: 0rem;
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+      }
 
       @media only screen and (max-width: $bp-small) {
         margin-right: 0rem;

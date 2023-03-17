@@ -57,10 +57,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     .hero {
       margin: 0;
       width: 100vw; } }
-  @media only screen and (max-width: 50em) {
-    .hero {
-      grid-template-rows: repeat(4, min-content);
-      height: min-content; } }
   @media only screen and (max-width: 37.5em) {
     .hero {
       display: flex;
@@ -77,25 +73,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     justify-self: center;
     grid-row: 1 / 2;
     animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms; }
-    @media only screen and (max-width: 93.75em) {
-      .hero__nombre {
-        font-size: 19rem; } }
-    @media only screen and (max-width: 75em) {
-      .hero__nombre {
-        font-size: 17rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .hero__nombre {
-        font-size: 15rem; } }
-    @media only screen and (max-width: 50em) {
-      .hero__nombre {
-        font-size: 13rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .hero__nombre {
-        font-size: 5rem;
-        font-weight: 400;
-        letter-spacing: 0rem;
-        margin-top: 4rem;
-        align-self: center; } }
   .hero__titulo {
     grid-column: 1 / -1;
     justify-self: center;
@@ -105,26 +82,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     letter-spacing: -.1rem;
     grid-row: 2 / 3;
     animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms; }
-    @media only screen and (max-width: 93.75em) {
-      .hero__titulo {
-        font-size: 2.6rem; } }
-    @media only screen and (max-width: 75em) {
-      .hero__titulo {
-        font-size: 2rem;
-        margin-top: -7rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .hero__titulo {
-        font-size: 2rem;
-        margin-top: -3rem; } }
-    @media only screen and (max-width: 50em) {
-      .hero__titulo {
-        margin-top: -1rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .hero__titulo {
-        font-size: 2rem;
-        letter-spacing: -.1rem;
-        margin-top: .5rem;
-        align-self: center; } }
   .hero__descripcion {
     grid-column: 3 / -1;
     font-size: 4rem;
@@ -132,58 +89,15 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     margin-top: 3rem;
     grid-row: 3 / 5;
     white-space: normal; }
-    @media only screen and (max-width: 93.75em) {
-      .hero__descripcion {
-        font-size: 3.3rem; } }
-    @media only screen and (max-width: 75em) {
-      .hero__descripcion {
-        font-size: 2.8rem;
-        margin-right: 3rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .hero__descripcion {
-        font-size: 2.6rem;
-        margin-top: 3rem;
-        margin-right: 3rem; } }
-    @media only screen and (max-width: 50em) {
-      .hero__descripcion {
-        font-size: 2.4rem;
-        margin-top: 6rem;
-        margin-right: 3rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .hero__descripcion {
-        font-size: 2.6rem;
-        margin: 2rem 2.5rem;
-        align-self: center;
-        text-align: center; } }
   .hero__redes-container {
     grid-column: 1 / 2;
     grid-row: 3 / 5;
     margin: auto;
     margin-left: 5rem; }
-    @media only screen and (max-width: 75em) {
-      .hero__redes-container {
-        margin-left: 7rem;
-        align-self: center; } }
-    @media only screen and (max-width: 50em) {
-      .hero__redes-container {
-        margin-top: 6rem;
-        align-self: center; } }
-    @media only screen and (max-width: 37.5em) {
-      .hero__redes-container {
-        margin: 0rem 2rem;
-        align-self: center; } }
   .hero__foot {
     grid-row: 4 / 5;
     margin-left: 5rem;
     grid-column: 1 / 2; }
-    @media only screen and (max-height: 50em) {
-      .hero__foot {
-        font-size: 1.2rem;
-        font-weight: 400; } }
-    @media only screen and (max-width: 37.5em) {
-      .hero__foot {
-        align-self: center;
-        margin-left: 0rem; } }
 
 @keyframes title--load-1 {
   0% {
@@ -268,7 +182,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   display: flex;
   width: min-content;
   flex-direction: row; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 62.5em) {
     .app {
       flex-direction: column;
       width: 100%; } }
@@ -280,9 +194,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   flex-direction: column;
   padding-top: 30%;
   margin: 4rem 7rem;
-  justify-content: flex-start;
   flex-wrap: wrap;
   font-family: "Helvetica Light", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    .visuales {
+      padding-top: 25vh;
+      align-self: center;
+      margin-bottom: auto; } }
+  @media only screen and (max-width: 62.5em) {
+    .visuales {
+      width: 100vw;
+      padding-top: 0;
+      justify-self: center;
+      margin: 4rem 0; } }
   @media only screen and (max-width: 37.5em) {
     .visuales {
       display: flex;
@@ -299,6 +223,12 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     justify-self: center;
     text-transform: uppercase;
     align-self: flex-end; }
+    @media only screen and (max-width: 62.5em) {
+      .visuales__nombre {
+        align-self: center; } }
+    @media only screen and (max-width: 50em) {
+      .visuales__nombre {
+        font-size: 15rem; } }
     @media only screen and (max-width: 37.5em) {
       .visuales__nombre {
         font-size: 6rem;
@@ -311,9 +241,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     margin: 2rem 1rem;
     white-space: normal;
     width: 40vw; }
+    @media only screen and (max-width: 75em) {
+      .visuales__descripcion {
+        font-size: 3.5rem;
+        width: 70vw;
+        text-align: center;
+        margin: 3rem 0; } }
+    @media only screen and (max-width: 62.5em) {
+      .visuales__descripcion {
+        align-self: center; } }
     @media only screen and (max-width: 37.5em) {
       .visuales__descripcion {
-        font-size: 2.8rem;
+        margin: 2rem 0;
+        font-size: 2.5rem;
         width: 90%;
         align-self: center;
         text-align: center; } }
@@ -322,6 +262,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     justify-self: flex-end;
     margin-top: auto;
     margin-bottom: 10rem; }
+    @media only screen and (max-width: 62.5em) {
+      .visuales__foot {
+        align-self: center;
+        margin-bottom: 0rem; } }
     @media only screen and (max-width: 37.5em) {
       .visuales__foot {
         align-self: center;
@@ -340,7 +284,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   /* NEW */
   min-width: 0;
   /* NEW; needed for Firefox */ }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 62.5em) {
     .galeria-visuales {
       height: min-content;
       display: flex;
@@ -348,7 +292,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       justify-content: center;
       align-items: center;
       width: 100%;
-      margin: 0; } }
+      margin: 0;
+      margin-top: 10rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .galeria-visuales {
+      margin-top: 1rem; } }
   .galeria-visuales__nombre {
     margin-top: 0rem;
     font-size: 19rem;
@@ -357,6 +305,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     text-transform: uppercase; }
+    @media only screen and (max-width: 75em) {
+      .galeria-visuales__nombre {
+        font-size: 16rem; } }
   .galeria-visuales__container {
     height: min-content;
     width: max-content;
@@ -364,6 +315,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     /* NEW */
     min-width: 0;
     /* NEW; needed for Firefox */ }
+    @media only screen and (max-width: 62.5em) {
+      .galeria-visuales__container {
+        margin-bottom: 10rem; }
+        .galeria-visuales__container:last-child {
+          margin-bottom: 0; } }
     @media only screen and (max-width: 37.5em) {
       .galeria-visuales__container {
         margin-bottom: 5rem; }
@@ -398,6 +354,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       grid-row: 2 / 20;
       grid-column: 13 / 14;
       z-index: 4; }
+      @media only screen and (max-width: 62.5em) {
+        .galeria-visuales__container--cuadrado-1 {
+          margin-right: 15rem; } }
       @media only screen and (max-width: 37.5em) {
         .galeria-visuales__container--cuadrado-1 {
           margin-right: 8rem; } }
@@ -405,6 +364,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       grid-row: 10 / 20;
       grid-column: 13 / 14;
       z-index: 4; }
+      @media only screen and (max-width: 62.5em) {
+        .galeria-visuales__container--cuadrado-2 {
+          margin-left: 15rem;
+          margin-top: -15rem; } }
       @media only screen and (max-width: 37.5em) {
         .galeria-visuales__container--cuadrado-2 {
           margin-left: 8rem;
@@ -414,6 +377,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       grid-column: 14 / 15;
       z-index: 1;
       margin-right: 5rem; }
+      @media only screen and (max-width: 62.5em) {
+        .galeria-visuales__container--vertical-4 {
+          margin-right: 0rem;
+          height: 60vh;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center; } }
       @media only screen and (max-width: 37.5em) {
         .galeria-visuales__container--vertical-4 {
           margin-right: 0rem;
@@ -431,7 +402,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   /* NEW */
   min-width: 0;
   /* NEW; needed for Firefox */ }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 75em) {
+    .galeria-otros {
+      margin-left: 15vw; } }
+  @media only screen and (max-width: 62.5em) {
     .galeria-otros {
       height: min-content;
       display: flex;
@@ -439,7 +413,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       justify-content: center;
       align-items: center;
       width: 100%;
-      margin: 0; } }
+      margin: 0;
+      margin-top: 10rem; } }
   .galeria-otros__container {
     height: 100%;
     width: max-content;
@@ -447,6 +422,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     /* NEW */
     min-width: 0;
     /* NEW; needed for Firefox */ }
+    @media only screen and (max-width: 62.5em) {
+      .galeria-otros__container {
+        margin-bottom: 10rem; }
+        .galeria-otros__container:last-child {
+          margin-bottom: 0; } }
     @media only screen and (max-width: 37.5em) {
       .galeria-otros__container {
         margin-bottom: 5rem; }
@@ -472,7 +452,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       grid-column: 6 / 9;
       z-index: 1;
       width: 65vw; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 62.5em) {
         .galeria-otros__container--horizontal-2 {
           height: 90vh;
           width: 100%; } }
@@ -480,19 +460,27 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       grid-row: 3 / 20;
       grid-column: 7 / 8;
       z-index: 6; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 62.5em) {
         .galeria-otros__container--vertical-1 {
           margin-top: -90vh;
           scale: 0.7; } }
+      @media only screen and (max-width: 50em) {
+        .galeria-otros__container--vertical-1 {
+          margin-top: -90vh;
+          scale: 1; } }
+      @media only screen and (max-width: 37.5em) {
+        .galeria-otros__container--vertical-1 {
+          margin-top: -90vh;
+          scale: .7; } }
     .galeria-otros__container--cuadrado-3 {
       grid-row: 1 / 21;
       grid-column: 9 / 12;
       z-index: 1;
       margin-left: -4rem;
       width: 65vw; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 62.5em) {
         .galeria-otros__container--cuadrado-3 {
-          height: 65vh;
+          height: 80vh;
           width: 100%;
           margin-left: 0rem;
           display: flex;
@@ -504,7 +492,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     .galeria-otros__container--cuadrado-4 {
       grid-row: 4 / 19;
       grid-column: 13 / 14; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 62.5em) {
         .galeria-otros__container--cuadrado-4 {
           margin-top: -13rem;
           margin-left: 13rem;
@@ -517,6 +505,17 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0 7rem;
   grid-template-columns: repeat(12, 1fr);
   font-family: "Helvetica Light", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    .otros {
+      margin: 0;
+      width: 100vw; } }
+  @media only screen and (max-width: 62.5em) {
+    .otros {
+      margin: 3rem 0rem 5rem 0rem;
+      height: min-content;
+      width: 100%;
+      padding: 0 2rem;
+      align-items: center; } }
   @media only screen and (max-width: 37.5em) {
     .otros {
       display: flex;
@@ -533,11 +532,22 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     text-transform: uppercase;
     grid-row: 1 / 2;
     grid-column: 9 / 12; }
+    @media only screen and (max-width: 75em) {
+      .otros__titulo {
+        grid-column: 7 / 11; } }
+    @media only screen and (max-width: 62.5em) {
+      .otros__titulo {
+        grid-column: 7 / 11;
+        font-size: 15rem; } }
+    @media only screen and (max-width: 50em) {
+      .otros__titulo {
+        font-size: 12rem; } }
     @media only screen and (max-width: 37.5em) {
       .otros__titulo {
         font-size: 8rem;
         letter-spacing: 0rem;
-        align-self: flex-end; } }
+        align-self: center;
+        margin-left: 7rem; } }
   .otros__trabajos {
     font-size: 18rem;
     font-weight: 400;
@@ -546,11 +556,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     text-align: center;
     grid-row: 3 / 4;
     grid-column: 3 / 10; }
+    @media only screen and (max-width: 62.5em) {
+      .otros__trabajos {
+        grid-column: 2 / 5;
+        font-size: 15rem; } }
+    @media only screen and (max-width: 50em) {
+      .otros__trabajos {
+        font-size: 12rem; } }
     @media only screen and (max-width: 37.5em) {
       .otros__trabajos {
-        font-size: 6rem;
+        font-size: 7rem;
         letter-spacing: 0rem;
-        align-self: flex-start; } }
+        align-self: center;
+        margin-right: 4rem; } }
   .otros__portadas {
     font-size: 3rem;
     font-weight: 400;
@@ -566,27 +584,50 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     font-weight: 400;
     justify-self: center;
     grid-column: 9 / 12; }
+    @media only screen and (max-width: 75em) {
+      .otros__estetica {
+        grid-column: 7 / 11; } }
+    @media only screen and (max-width: 62.5em) {
+      .otros__estetica {
+        margin-top: 2rem;
+        grid-column: 5 / 11; } }
     @media only screen and (max-width: 37.5em) {
       .otros__estetica {
         font-size: 2rem;
-        align-self: flex-start; } }
+        align-self: center; } }
     .otros__estetica--1 {
       grid-row: 8 / 9; }
+      @media only screen and (max-width: 62.5em) {
+        .otros__estetica--1 {
+          grid-column: 7 / 11; } }
+      @media only screen and (max-width: 50em) {
+        .otros__estetica--1 {
+          grid-column: 7 / 12; } }
       @media only screen and (max-width: 37.5em) {
         .otros__estetica--1 {
-          align-self: flex-end;
           margin-bottom: 1rem; } }
     .otros__estetica--2 {
       grid-row: 9 / 10; }
+      @media only screen and (max-width: 62.5em) {
+        .otros__estetica--2 {
+          grid-column: 5 / 12; } }
+      @media only screen and (max-width: 50em) {
+        .otros__estetica--2 {
+          grid-column: 2 / 12; } }
       @media only screen and (max-width: 37.5em) {
         .otros__estetica--2 {
-          align-self: flex-start;
           font-size: 1.7rem; } }
   .otros__foot {
     grid-row: 11 / 12;
     margin-left: 6rem;
     grid-column: 1 / 3;
     margin-top: 2rem; }
+    @media only screen and (max-width: 50em) {
+      .otros__foot {
+        grid-column: 1 / 4;
+        margin-left: 2rem;
+        margin-top: 4rem;
+        font-size: 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .otros__foot {
         align-self: center;
@@ -629,8 +670,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       width: 35rem; }
       @media only screen and (max-width: 50em) {
         .image-container__image--sm {
-          height: 25rem;
-          width: 25rem; } }
+          height: 30rem;
+          width: 30rem; } }
       @media only screen and (max-width: 37.5em) {
         .image-container__image--sm {
           height: 20rem;
@@ -695,13 +736,27 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .triptico {
   display: flex;
   flex-direction: column; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 62.5em) {
     .triptico {
       width: 100%;
       flex-direction: row; } }
   .triptico__img {
     width: 17rem;
     margin-top: 1.6rem; }
+    @media only screen and (max-width: 62.5em) {
+      .triptico__img {
+        width: 25rem;
+        margin-right: 10rem;
+        margin-top: 0; }
+        .triptico__img:last-child {
+          margin-right: 0; } }
+    @media only screen and (max-width: 50em) {
+      .triptico__img {
+        width: 20rem;
+        margin-right: 7rem;
+        margin-top: 0; }
+        .triptico__img:last-child {
+          margin-right: 0; } }
     @media only screen and (max-width: 37.5em) {
       .triptico__img {
         width: 9rem;

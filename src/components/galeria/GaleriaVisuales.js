@@ -12,7 +12,7 @@ const GaleriaVisuales = (props) => {
   return (
     <div data-scroll-section>
       <div className="galeria-visuales">
-        {window.innerWidth <= 600 ? (
+        {window.innerWidth <= 1000 ? (
           <div></div>
         ) : (
           <h1 className="galeria-visuales__nombre">Visuales</h1>

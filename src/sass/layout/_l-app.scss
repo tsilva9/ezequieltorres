@@ -3,7 +3,7 @@
   width: min-content;
   flex-direction: row;
 
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-large) {
     flex-direction: column;
     width: 100%;
     }

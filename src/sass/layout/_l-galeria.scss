@@ -11,24 +11,9 @@
   min-height: 0;  /* NEW */
   min-width: 0;   /* NEW; needed for Firefox */
 
-  @media only screen and (min-width: $bp-large) {
-    margin-left: 5vw;
-  }
 
 
-  @media only screen and (max-width: $bp-medium) {
-    margin-left: 10vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-right: 10vw;
-  }
-
-  
-
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-large) {
     height: min-content;
     display: flex;
     flex-direction: column;
@@ -36,31 +21,34 @@
     align-items: center;
     width: 100%;
     margin: 0;
+    margin-top: 10rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 5rem;
   }
 
   &__container {
-    height: min-content;
+    height: 100%;
     width: max-content;
     overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 
-    @media only screen and (max-width: $bp-medium) {
-      height: min-content;
-    }
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 10rem;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+    } 
 
-    
     @media only screen and (max-width: $bp-small) {
-      height: min-content;
-      margin: 6rem 0;
-      width: 100%;
-      overflow: hidden;
+      margin-bottom: 5rem;
 
-      display: flex;
-      flex-direction: column;
-
-      align-items: center;
-    }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    } 
 
     &--vertical-1 {
       grid-row: 7 / 20;

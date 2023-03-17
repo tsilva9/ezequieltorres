@@ -57,12 +57,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     .hero {
       margin: 0;
       width: 100vw; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 62.5em) {
+    .hero {
+      height: 60vh; } }
+  @media only screen and (max-width: 50em) {
     .hero {
       display: flex;
       flex-direction: column;
       margin: 0 0rem;
       height: min-content;
+      align-items: center;
       width: 100%; } }
   .hero__nombre {
     margin-top: 5rem;
@@ -73,6 +77,23 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     justify-self: center;
     grid-row: 1 / 2;
     animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms; }
+    @media only screen and (max-width: 93.75em) {
+      .hero__nombre {
+        font-size: 18rem; } }
+    @media only screen and (max-width: 75em) {
+      .hero__nombre {
+        font-size: 15rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .hero__nombre {
+        font-size: 13rem; } }
+    @media only screen and (max-width: 50em) {
+      .hero__nombre {
+        font-size: 9rem;
+        letter-spacing: -0.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .hero__nombre {
+        font-size: 5rem;
+        letter-spacing: -0.3rem; } }
   .hero__titulo {
     grid-column: 1 / -1;
     justify-self: center;
@@ -82,22 +103,68 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     letter-spacing: -.1rem;
     grid-row: 2 / 3;
     animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms; }
+    @media only screen and (max-width: 75em) {
+      .hero__titulo {
+        font-size: 2.6rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .hero__titulo {
+        margin-top: 0rem;
+        font-size: 2.3rem; } }
+    @media only screen and (max-width: 50em) {
+      .hero__titulo {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .hero__titulo {
+        font-size: 1.5rem; } }
   .hero__descripcion {
     grid-column: 3 / -1;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 400;
     margin-top: 3rem;
     grid-row: 3 / 5;
     white-space: normal; }
+    @media only screen and (max-width: 93.75em) {
+      .hero__descripcion {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 75em) {
+      .hero__descripcion {
+        font-size: 2.8rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .hero__descripcion {
+        grid-column: 2 / 5;
+        padding: 0 6rem;
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 50em) {
+      .hero__descripcion {
+        text-align: center;
+        font-size: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .hero__descripcion {
+        padding: 0 2rem;
+        margin-top: 2rem;
+        font-size: 1.5rem; } }
   .hero__redes-container {
     grid-column: 1 / 2;
     grid-row: 3 / 5;
     margin: auto;
     margin-left: 5rem; }
+    @media only screen and (max-width: 75em) {
+      .hero__redes-container {
+        grid-row: 2 / 5; } }
+    @media only screen and (max-width: 62.5em) {
+      .hero__redes-container {
+        margin-top: 3rem;
+        grid-row: 3 / 5; } }
+    @media only screen and (max-width: 50em) {
+      .hero__redes-container {
+        margin: 0; } }
   .hero__foot {
     grid-row: 4 / 5;
     margin-left: 5rem;
     grid-column: 1 / 2; }
+    @media only screen and (max-width: 50em) {
+      .hero__foot {
+        margin: 0; } }
 
 @keyframes title--load-1 {
   0% {
@@ -116,19 +183,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   /* NEW */
   min-width: 0;
   /* NEW; needed for Firefox */ }
-  @media only screen and (min-width: 62.5em) {
-    .galeria {
-      margin-left: 5vw; } }
-  @media only screen and (max-width: 50em) {
-    .galeria {
-      margin-left: 10vw;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin-right: 10vw; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 62.5em) {
     .galeria {
       height: min-content;
       display: flex;
@@ -136,26 +191,28 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       justify-content: center;
       align-items: center;
       width: 100%;
-      margin: 0; } }
+      margin: 0;
+      margin-top: 10rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .galeria {
+      margin-top: 5rem; } }
   .galeria__container {
-    height: min-content;
+    height: 100%;
     width: max-content;
     overflow: hidden;
     /* NEW */
     min-width: 0;
     /* NEW; needed for Firefox */ }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 62.5em) {
       .galeria__container {
-        height: min-content; } }
+        margin-bottom: 10rem; }
+        .galeria__container:last-child {
+          margin-bottom: 0; } }
     @media only screen and (max-width: 37.5em) {
       .galeria__container {
-        height: min-content;
-        margin: 6rem 0;
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center; } }
+        margin-bottom: 5rem; }
+        .galeria__container:last-child {
+          margin-bottom: 0; } }
     .galeria__container--vertical-1 {
       grid-row: 7 / 20;
       grid-column: 1 / 2; }
@@ -253,7 +310,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     @media only screen and (max-width: 37.5em) {
       .visuales__descripcion {
         margin: 2rem 0;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         width: 90%;
         align-self: center;
         text-align: center; } }
@@ -520,7 +577,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     .otros {
       display: flex;
       flex-direction: column;
-      margin: 4.5rem 0rem 5rem 0rem;
+      margin: 4.5rem 0rem 0rem 0rem;
       height: min-content;
       width: 100%;
       padding: 0 2rem;
@@ -544,7 +601,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
         font-size: 12rem; } }
     @media only screen and (max-width: 37.5em) {
       .otros__titulo {
-        font-size: 8rem;
+        font-size: 6rem;
         letter-spacing: 0rem;
         align-self: center;
         margin-left: 7rem; } }
@@ -565,7 +622,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
         font-size: 12rem; } }
     @media only screen and (max-width: 37.5em) {
       .otros__trabajos {
-        font-size: 7rem;
+        font-size: 5rem;
         letter-spacing: 0rem;
         align-self: center;
         margin-right: 4rem; } }
@@ -577,7 +634,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     grid-column: 3 / 10; }
     @media only screen and (max-width: 37.5em) {
       .otros__portadas {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin: 1rem 0; } }
   .otros__estetica {
     font-size: 2.8rem;
@@ -593,7 +650,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
         grid-column: 5 / 11; } }
     @media only screen and (max-width: 37.5em) {
       .otros__estetica {
-        font-size: 2rem;
+        font-size: 1.7rem;
         align-self: center; } }
     .otros__estetica--1 {
       grid-row: 8 / 9; }
@@ -614,9 +671,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       @media only screen and (max-width: 50em) {
         .otros__estetica--2 {
           grid-column: 2 / 12; } }
-      @media only screen and (max-width: 37.5em) {
-        .otros__estetica--2 {
-          font-size: 1.7rem; } }
   .otros__foot {
     grid-row: 11 / 12;
     margin-left: 6rem;
@@ -639,7 +693,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   width: min-content;
   display: flex;
   flex-direction: column; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 50em) {
     .redes {
       flex-direction: row; } }
   .redes__red {
@@ -647,17 +701,22 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     font-weight: 400;
     letter-spacing: -.1rem;
     margin-bottom: 5rem; }
+    @media only screen and (max-width: 75em) {
+      .redes__red {
+        font-size: 2.6rem; } }
     @media only screen and (max-width: 62.5em) {
       .redes__red {
-        font-size: 2.8rem; } }
+        font-size: 2.5rem; } }
     @media only screen and (max-width: 50em) {
       .redes__red {
         font-size: 2.4rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 50em) {
       .redes__red {
-        font-size: 2.6rem;
         align-self: center;
         margin: 3rem 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .redes__red {
+        font-size: 1.8rem; } }
 
 .image-container {
   height: max-content;

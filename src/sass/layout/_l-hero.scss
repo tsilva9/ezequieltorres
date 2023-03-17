@@ -11,18 +11,21 @@
     width: 100vw;
 }
 
+    @media only screen and (max-width: $bp-large) {
+      height: 60vh;
+    }
+
   width: 90vw;
   height: 100%;
 
-  // @media only screen and (max-height: $bp-medium) {
-  //   //grid-template-rows: 6rem calc(100vh - 6rem);
-  // }
+  
 
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-medium) {
     display: flex; 
     flex-direction: column;
     margin: 0 0rem;
     height: min-content;
+    align-items: center;
     width: 100%;
     }
   
@@ -40,6 +43,27 @@
     grid-row: 1 / 2;
     animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
 
+    @media only screen and (max-width: $bp-huge) {
+      font-size: 18rem;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 15rem;
+}
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 13rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 9rem;
+      letter-spacing: -0.5rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 5rem;
+      letter-spacing: -0.3rem;
+    }
+
 
   
   }
@@ -55,18 +79,56 @@
     grid-row: 2 / 3;
     animation: title--load-1 cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
 
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2.6rem;
+    }
 
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 0rem;
+      font-size: 2.3rem;
+    }
 
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2rem;
+    }
 
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
   }
 
   &__descripcion {
     grid-column: 3 / -1;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 400;
     margin-top: 3rem;
     grid-row: 3 / 5;
     white-space: normal;
+
+    @media only screen and (max-width: $bp-huge) {
+      font-size: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 2.8rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 2 / 5;
+    padding: 0 6rem;
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0 2rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
 
   }
 
@@ -75,6 +137,19 @@
     grid-row: 3 / 5;
     margin: auto;
     margin-left: 5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-row: 2 / 5;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 3rem;
+    grid-row: 3 / 5;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0;
+}
     
 
   }
@@ -83,7 +158,10 @@
     grid-row: 4 / 5;
     margin-left: 5rem;
     grid-column: 1 / 2;
-    
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+  }
 
 
   }

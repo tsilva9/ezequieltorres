@@ -20,6 +20,9 @@ const App = () => {
     vertical3: require("../../assets/galeria/vertical-3.jpg"),
     horizontal3: require("../../assets/galeria/horizontal-3.jpg"),
     horizontal4: require("../../assets/galeria/horizontal-4.jpg"),
+    vertical4: require("../../assets/galeria/vertical-4.jpg"),
+    horizontal5: require("../../assets/galeria/horizontal-5.jpg"),
+    horizontal6: require("../../assets/galeria/horizontal-6.jpg"),
   });
 
   const imagesPreloaded = useImagePreloader(galeriaImages).imagesPreloaded;

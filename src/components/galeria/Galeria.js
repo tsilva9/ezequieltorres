@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../../css/style.css";
 import ImageContainer from "../ImageContainer";
 
@@ -35,7 +34,7 @@ const Galeria = (props) => {
         >
           <ImageContainer
             imgPath={props.images.vertical2}
-            clase="image-container__image image-container__image--vl"
+            clase="image-container__image image-container__image--vm"
           />
         </div>
 
@@ -46,7 +45,7 @@ const Galeria = (props) => {
         >
           <ImageContainer
             imgPath={props.images.horizontal2}
-            clase="image-container__image image-container__image--hl"
+            clase="image-container__image image-container__image--hh"
           />
         </div>
 
@@ -79,7 +78,40 @@ const Galeria = (props) => {
         >
           <ImageContainer
             imgPath={props.images.horizontal4}
-            clase="image-container__image image-container__image--hl"
+            clase="image-container__image image-container__image--hh"
+          />
+        </div>
+
+        <div
+          className="galeria__container galeria__container--vertical-4"
+          data-scroll
+          data-scroll-speed="2"
+        >
+          <ImageContainer
+            imgPath={props.images.vertical4}
+            clase="image-container__image image-container__image--vm"
+          />
+        </div>
+
+        <div
+          className="galeria__container galeria__container--horizontal-5"
+          data-scroll
+          data-scroll-speed="4"
+        >
+          <ImageContainer
+            imgPath={props.images.horizontal5}
+            clase="image-container__image image-container__image--hm"
+          />
+        </div>
+
+        <div
+          className="galeria__container galeria__container--horizontal-6"
+          data-scroll
+          data-scroll-speed="0"
+        >
+          <ImageContainer
+            imgPath={props.images.horizontal6}
+            clase="image-container__image image-container__image--hh"
           />
         </div>
       </div>

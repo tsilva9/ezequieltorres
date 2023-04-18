@@ -109,14 +109,31 @@
       width: 80rem;
 
       @media only screen and (max-width: $bp-medium) {
-        height: 45rem;
-        width: 72rem;
+        height: 40rem;
+        width: 64rem;
       }
 
       @media only screen and (max-width: $bp-small) {
         height: 23rem;
         width: 35rem;
       }
+    }
+
+    &--hh {
+
+      height: 70rem;
+      width: 112rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 40rem;
+        width: 64rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: 23rem;
+        width: 35rem;
+      }
+
     }
 
     // WHOLE HEIGHT

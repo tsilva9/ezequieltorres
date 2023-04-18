@@ -1,10 +1,10 @@
 import "../../css/style.css";
-import { useState } from "react";
 import Navbar from "../Navbar";
 import OtrosHero from "../hero/OtrosHero";
 import GaleriaOtros from "../galeria/GaleriaOtros";
 import CustomCursor from "../../utils/CustomCursor";
 import useLocoScroll from "../../utils/useLocoScroll";
+import { useState, useEffect } from "react";
 
 const Otros = () => {
   const loco = useLocoScroll(true);
@@ -27,12 +27,32 @@ const Otros = () => {
     },
   });
 
+  const [screenWidth, setScreenWidth] = useState(
+    window.innerWidth <= 600 ? true : false
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenWidth(window.innerWidth <= 600 ? true : false);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div data-scroll-container id="main-scp" className="app">
       <Navbar />
       <CustomCursor />
-      <OtrosHero />
-      <GaleriaOtros images={galeriaVisualesImages} triptico={triptico} />
+      <OtrosHero mobile={screenWidth} />
+      <GaleriaOtros
+        images={galeriaVisualesImages}
+        triptico={triptico}
+        mobile={screenWidth}
+      />
     </div>
   );
 };

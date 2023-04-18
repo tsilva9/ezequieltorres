@@ -1,6 +1,6 @@
 import "../../css/style.css";
 
-const OtrosHero = () => {
+const OtrosHero = (props) => {
   return (
     <div data-scroll-section>
       <div className="otros">
@@ -12,9 +12,18 @@ const OtrosHero = () => {
         <p className="otros__estetica otros__estetica--1">
           estética para álbums
         </p>
-        <p className="otros__estetica otros__estetica--2">
-          curatoría de redes/plataformas de streaming
-        </p>
+
+        {props.mobile ? (
+          <p className="otros__estetica otros__estetica--2">
+            curatoría de redes/
+            <br />
+            plataformas de streaming
+          </p>
+        ) : (
+          <p className="otros__estetica otros__estetica--2">
+            curatoría de redes/plataformas de streaming
+          </p>
+        )}
 
         <p className="otros__foot">2022, hecho con amor</p>
       </div>

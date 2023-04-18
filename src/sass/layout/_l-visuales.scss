@@ -74,13 +74,15 @@
 
   @media only screen and (max-width: $bp-largest) {
     font-size: 3.5rem;
-    width: 70vw;
-    text-align: center;
+    width: 60vw;
+    z-index: 100;
+    //text-align: center;
     margin: 3rem 0;
   }
 
   @media only screen and (max-width: $bp-large) {
     align-self: center;
+    text-align: center;
   }
 
 

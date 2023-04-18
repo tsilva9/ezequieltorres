@@ -65,6 +65,12 @@
       grid-row: 7 / 20;
       grid-column: 4 / 5;
       z-index: 4;
+
+      @media only screen and (min-width: $bp-large) {
+        margin-left: -20rem;
+      } 
+
+
     }
 
     &--cuadrado-2 {
@@ -131,6 +137,10 @@
       grid-row: 9 / 20;
       grid-column: 12 / 13;
       z-index: 3;
+      
+      @media only screen and (min-width: $bp-large) {
+        margin-left: -30rem;
+      }
     }
 
 

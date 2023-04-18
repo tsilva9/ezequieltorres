@@ -24,7 +24,7 @@ const GaleriaOtros = (props) => {
         >
           <ImageContainer
             imgPath={props.images.horizontal1}
-            clase="image-container__image image-container__image--hl"
+            clase="image-container__image image-container__image--hh"
           />
         </div>
 

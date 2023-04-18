@@ -13,6 +13,7 @@ const Error = () => {
 
   return (
     <div data-scroll-container id="main-scp" className="app">
+      <CustomCursor />
       <ErrorHero images={galeriaVisualesImages} />
     </div>
   );

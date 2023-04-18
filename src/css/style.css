@@ -50,7 +50,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   color: white;
   width: 100vw;
   height: 100vh;
-  cursor: pointer;
   font-weight: 300;
   overflow: hidden;
   display: grid;
@@ -59,7 +58,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   .error__error {
     font-size: 6rem;
     font-weight: 300;
-    cursor: pointer;
     margin-left: 3rem;
     z-index: 5; }
     .error__error--1 {

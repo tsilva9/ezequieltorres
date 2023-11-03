@@ -1,5 +1,7 @@
 import "../../css/style.css";
 
+import Amor from "../Amor";
+
 const OtrosHero = (props) => {
   return (
     <div data-scroll-section>
@@ -15,17 +17,17 @@ const OtrosHero = (props) => {
 
         {props.mobile ? (
           <p className="otros__estetica otros__estetica--2">
-            curatoría de redes/
+            curaduría de redes/
             <br />
             plataformas de streaming
           </p>
         ) : (
           <p className="otros__estetica otros__estetica--2">
-            curatoría de redes/plataformas de streaming
+            curaduría de redes/plataformas de streaming
           </p>
         )}
 
-        <p className="otros__foot">2022, hecho con amor</p>
+        <p className="otros__foot"><Amor/></p>
       </div>
     </div>
   );

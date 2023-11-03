@@ -1,4 +1,5 @@
 import "../../css/style.css";
+import Amor from "../Amor";
 
 const Visuales = () => {
   return (
@@ -12,7 +13,7 @@ const Visuales = () => {
         {/* <h1 className="visuales__nombre">Visuales</h1> */}
 
         <p className="visuales__descripcion visuales__descripcion--1">
-          el propósito de las visuales en vivo se enfoca en enriquecer la
+          el propósito de las visuales se enfoca en enriquecer la
           experiencia del show, aportando una cualidad inmersiva
         </p>
 
@@ -21,7 +22,7 @@ const Visuales = () => {
           cada artista con el objetivo de lograr un resultado irrepetible.
         </p>
 
-        <p className="visuales__foot">2022, Hecho con amor</p>
+        <p className="visuales__foot"><Amor/></p>
       </div>
     </div>
   );

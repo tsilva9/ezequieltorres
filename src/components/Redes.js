@@ -17,7 +17,7 @@ const Redes = () => {
         onMouseEnter={mouseEnter}
         onMouseLeave={mouseLeave}
       >
-        Instagram
+        instagram
       </p>
       <p
         className="redes__red"
@@ -25,17 +25,17 @@ const Redes = () => {
         onMouseEnter={mouseEnter}
         onMouseLeave={mouseLeave}
       >
-        Behance
+        behance
       </p>
       <p
         className="redes__red"
         onClick={() =>
-          openInNewTab("https://www.facebook.com/ezequiel.torresredon")
+          openInNewTab("https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=ezequieltorres26@gmail.com")
         }
         onMouseEnter={mouseEnter}
         onMouseLeave={mouseLeave}
       >
-        Facebook
+        gmail
       </p>
     </div>
   );
